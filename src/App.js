@@ -27,8 +27,7 @@ class App extends Component {
         <WeatherDisplay
           key={activePlace}
           city={PLACES[activePlace].city}
-          //zip={PLACES[activePlace].zip}
-        />
+       />
       </div>
     );
   }

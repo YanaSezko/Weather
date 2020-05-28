@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 
 
 export const PLACES = [
+  { name: "Киев", city: "Kyiv"/* zip: "96803" */ },
     { name: "Харьков", city: "Kharkov"/* , zip: "94303" */ },
     { name: "Керчь", city: "Kerch" /* zip: "94088" */ },
-    { name: "Лозовая", city: "Lozova"/* zip: "95062" */ },
-    { name: "Киев", city: "Kyiv"/* zip: "96803" */ }
+    { name: "Лозова", city: "Lozova"/* zip: "95062" */ }
+    
   ];
 
 export default class WeatherDisplay extends Component {
@@ -40,7 +41,7 @@ export default class WeatherDisplay extends Component {
             <p>Текущая: {weatherData.main.temp}°</p>
             <p>Максимальная: {weatherData.main.temp_max}°</p>
             <p>Минимальная: {weatherData.main.temp_min}°</p>
-            <p>Скорость ветра: {weatherData.wind.speed} mi/hr</p>
+           <p>Скорость ветра: {weatherData.wind.speed} м/с</p>
           </div>
         );
   }
