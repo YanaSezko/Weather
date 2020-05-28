@@ -3,7 +3,7 @@ import './App.css';
 import WeatherDisplay, { PLACES } from './Components/WeatherDisplay';
 
 
-class App extends Component {
+export default class App extends Component {
   constructor() {
     super();
     this.state = {
@@ -33,4 +33,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+

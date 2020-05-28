@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 
 
 export const PLACES = [
-  { name: "Киев", city: "Kyiv"/* zip: "96803" */ },
-    { name: "Харьков", city: "Kharkov"/* , zip: "94303" */ },
-    { name: "Керчь", city: "Kerch" /* zip: "94088" */ },
-    { name: "Лозова", city: "Lozova"/* zip: "95062" */ }
-    
+  { name: "Киев", city: "Kyiv"},
+  { name: "Харьков", city: "Kharkov"},
+  { name: "Керчь", city: "Kerch"},
+  { name: "Лозова", city: "Lozova"}
   ];
 
 export default class WeatherDisplay extends Component {
@@ -17,11 +16,9 @@ export default class WeatherDisplay extends Component {
       };
     }
     componentDidMount() {
-      //const zip = this.props.zip;
       const city = this.props.city;
       const URL = "http://api.openweathermap.org/data/2.5/weather?q=" +
-        city/* zip */ +
-        "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric&lang=ru";
+        city + "&appid=b1b35bba8b434a28a0be2a3e1071ae5b&units=metric&lang=ru";
       fetch(URL).then(res => res.json()).then(json => {
         this.setState({ weatherData: json });
       });
@@ -46,4 +43,5 @@ export default class WeatherDisplay extends Component {
         );
   }
 }
+
 

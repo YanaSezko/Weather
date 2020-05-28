@@ -13,6 +13,17 @@ button{
   border: 1px solid #63a75a;
   border-radius: 5px;
   background-color: rgb(182, 172, 29);
+  font-size: 18px;
+}
+button:hover,
+button:active,
+button:focus
+{
+  
+  border: 1px solid #fff;
+  outline: none;
+
+  background-color: #63a75a;
 }
 h1{
   border: 1px solid #ffffff;
