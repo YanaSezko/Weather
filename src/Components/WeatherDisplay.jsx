@@ -1,13 +1,5 @@
 import React, { Component } from 'react';
 
-
-export const PLACES = [
-  { name: "Киев", city: "Kyiv"},
-  { name: "Харьков", city: "Kharkov"},
-  { name: "Керчь", city: "Kerch"},
-  { name: "Лозова", city: "Lozova"}
-  ];
-
 export default class WeatherDisplay extends Component {
     constructor() {
       super();

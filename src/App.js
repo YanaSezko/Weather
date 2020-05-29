@@ -1,7 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import WeatherDisplay, { PLACES } from './Components/WeatherDisplay';
+import WeatherDisplay from './Components/WeatherDisplay';
 
+
+
+const PLACES = [
+  { name: "Киев", city: "Kyiv"},
+  { name: "Харьков", city: "Kharkov"},
+  { name: "Керчь", city: "Kerch"},
+  { name: "Лозова", city: "Lozova"}
+  ];
 
 export default class App extends Component {
   constructor() {
@@ -21,12 +29,10 @@ export default class App extends Component {
               this.setState({ activePlace: index });
             }}
           >
-              {place.name}
+              {place.city}
           </button>
         ))}
-        <WeatherDisplay
-          key={activePlace}
-          city={PLACES[activePlace].city}
+        <WeatherDisplay key={activePlace} city={PLACES[activePlace].city}
        />
       </div>
     );
